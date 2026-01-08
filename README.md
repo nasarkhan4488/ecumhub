@@ -70,6 +70,38 @@
 (Currently a flat structure for simplicity, ideal for learning PHP/MySQL fundamentals).
 
 ---
+# 🛒 EcumHub - Multipurpose E-Commerce & Media Platform
+
+**EcumHub** is a feature-rich web application built with PHP and MySQL. It combines a professional shopping experience with specialized modules for Anime content, a blogging system, and digital game downloads.
+
+---
+
+## 🌟 Unique Features
+
+### **🎮 Media & Entertainment**
+* **Anime Hub:** Explore details about different series via `anime-details.php`.
+* **Integrated Blog:** A full blogging platform with `blog.php` and `blog-details.php`.
+* **Free Game Downloads:** A dedicated section for digital assets (`download_free_game.php`).
+
+### **🛍️ E-Commerce & User Tools**
+* **Shopping Cart:** Manage products and checkout via `cart.php` and `pay.php`.
+* **Order Tracking:** Live status updates for customers using `track.php`.
+* **Advanced Profiles:** Account verification, password recovery, and custom profile images.
+
+---
+
+## 🛠️ Tech Stack
+* **Backend:** PHP 8.x
+* **Database:** MySQL
+* **Frontend:** HTML5, CSS3, JavaScript (Bootstrap)
+
+---
+
+## ⚙️ Installation
+1. **Clone the project:** `git clone https://github.com/nasarkhan4488/ecumhub.git`
+2. **Database Setup:** Create a database named `ecumhub` in phpMyAdmin. (Make sure to import the `.sql` file once uploaded).
+3. **Configuration:** Update your database credentials in your connection file.
+4. **Run:** Access via `localhost/ecumhub/index.php`.
 
 ## ⚙️ Installation
 
