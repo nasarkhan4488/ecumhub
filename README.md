@@ -253,6 +253,16 @@
 3. **Run:** Access via `http://localhost/ecumhub/index.php`.
 
 ---
+## 🚀 Core Features
 
+### **👤 User Account Management**
+* **Secure Authentication:** Includes `verification.php` and password recovery.
+* **Profile Customization:** Users can update info and upload profile images.
+
+### **📦 Order & Media Management**
+* **Live Tracking:** Customers can monitor order status using `track.php`.
+* **Anime & Media Hub:** Specialized pages for anime details (`anime-details.php`).
+* **Gaming Section:** Free game download functionality (`download_free_game.php`).
+* **Blogging System:** Full blog support with `blog.php` and `blog-details.php`.
 ## 📂 Project Structure
 (Currently a flat structure optimized for educational purposes and ease of access).
