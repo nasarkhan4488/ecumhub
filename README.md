@@ -268,5 +268,14 @@
 * **Anime Hub:** Explore detailed series information using `anime-details.php`.
 * **Integrated Blog:** Full blogging platform via `blog.php` and `blog-details.php`.
 * **Gaming Section:** Support for free game downloads (`download_free_game.php`).
+* ### **🎮 Entertainment & Media**
+* **Anime Hub:** Detailed series information and viewing via `anime-details.php`.
+* **Gaming Section:** Support for digital asset/game downloads via `download_free_game.php`.
+* **Integrated Blog:** Full blogging system with `blog.php` and `blog-details.php`.
+
+### **🛍️ E-Commerce & User Tools**
+* **Secure Shopping:** Full cart (`cart.php`) and payment processing (`pay.php`).
+* **Order Tracking:** Real-time shipment tracking for customers using `track.php`.
+* **Advanced Profiles:** Verification, password recovery, and custom image uploads.
 ## 📂 Project Structure
 (Currently a flat structure optimized for educational purposes and ease of access).
