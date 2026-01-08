@@ -1,0 +1,176 @@
+---
+# Configuration Guide for Game Downloader Project
+
+This document outlines the configuration details needed for setting up **JazzCash Payment Integration**, **Database Connection**, and **Admin Panel Access** for the **Game Downloader** web application.
+---
+
+## 1. JazzCash Payment Configuration (`Source/Nav/payconfig.php`)
+
+The `payconfig.php` file contains important configuration settings to integrate JazzCash payment gateway into the application. Follow the instructions below to configure the payment gateway correctly:
+
+### Configuration Parameters:
+
+- **JAZZCASH_MERCHANT_ID**:
+
+  - **Description**: The unique merchant ID provided by JazzCash.
+  - **How to set**: Replace the empty value with your merchant ID.
+
+  ```php
+  define('JAZZCASH_MERCHANT_ID', 'your_merchant_id_here');
+  ```
+
+- **JAZZCASH_PASSWORD**:
+
+  - **Description**: The password for your JazzCash merchant account.
+  - **How to set**: Replace the empty value with your JazzCash password.
+
+  ```php
+  define('JAZZCASH_PASSWORD', 'your_password_here');
+  ```
+
+- **JAZZCASH_INTEGERITY_SALT**:
+
+  - **Description**: The integrity salt used for secure transactions.
+  - **How to set**: Replace the empty value with your integrity salt.
+
+  ```php
+  define('JAZZCASH_INTEGERITY_SALT', 'your_integrity_salt_here');
+  ```
+
+- **JAZZCASH_CURRENCY_CODE**:
+
+  - **Description**: Currency code for transactions (default: PKR).
+  - **Default Value**: `PKR`
+
+  ```php
+  define('JAZZCASH_CURRENCY_CODE', 'PKR');
+  ```
+
+- **JAZZCASH_API_VERSION_1 and JAZZCASH_API_VERSION_2**:
+
+  - **Description**: API versions supported by JazzCash.
+  - **Default Values**:
+    ```php
+    define('JAZZCASH_API_VERSION_1', '1.1');
+    define('JAZZCASH_API_VERSION_2', '2.0');
+    ```
+
+- **JAZZCASH_RETURN_URL**:
+
+  - **Description**: The URL to which users will be redirected after the payment process is completed.
+  - **How to set**: Replace the empty value with the full URL to handle payment returns (e.g., success or failure pages).
+
+  ```php
+  define('JAZZCASH_RETURN_URL', 'http://yourwebsite.com/return_url.php');
+  ```
+
+- **JAZZCASH_HTTP_POST_URL**:
+
+  - **Description**: The URL to which payment requests are posted.
+  - **Default Value**: `https://sandbox.jazzcash.com.pk/ApplicationAPI/API/2.0/Purchase/DoMWalletTransaction` for sandbox testing.
+
+  ```php
+  define('JAZZCASH_HTTP_POST_URL', 'https://sandbox.jazzcash.com.pk/ApplicationAPI/API/2.0/Purchase/DoMWalletTransaction');
+  ```
+
+- **JAZZCASH_CARD_API_URL**:
+
+  - **Description**: The API URL for processing card transactions.
+  - **How to set**: Replace the empty value with the correct JazzCash API URL for card payments.
+
+  ```php
+  define('JAZZCASH_CARD_API_URL', 'your_card_api_url_here');
+  ```
+
+- **BASE_URL**:
+  - **Description**: The base URL of your website.
+  - **How to set**: Replace the empty value with the base URL of your application.
+  ```php
+  define('BASE_URL', 'http://yourwebsite.com');
+  ```
+
+---
+
+## 2. Database Configuration (`Source/Nav/config.php`)
+
+The `config.php` file contains the database connection setup for the project. It connects the application to the MySQL database and fetches general contact information from the `contact_info` table.
+
+### Configuration Parameters:
+
+- **Database Connection**
+
+  - **$servername**: The server name where your database is hosted. Default is `localhost`.
+  - **$username**: Your MySQL database username.
+  - **$password**: Your MySQL database password.
+  - **$dbname**: The name of your database (default: `game_downloader`).
+
+  Example configuration:
+
+  ```php
+  $servername = "localhost";
+  $username = "root"; // Replace with your DB username
+  $password = ""; // Replace with your DB password
+  $dbname = "game_downloader"; // Replace with your DB name
+  ```
+
+- **Timezone Setting**:  
+  The timezone is set to `Asia/Karachi` by default.
+
+  ```php
+  date_default_timezone_set('Asia/Karachi');
+  ```
+
+- **Contact Information Query**:  
+  The system fetches website contact information such as email, phone, address, and logo from the `contact_info` table:
+
+  ```php
+  $query = "SELECT `id`, `email`, `phone`, `address`, `description`, `created_at`, `updated_at`, `website_name`, `logo` FROM `contact_info` WHERE 1";
+  $result = $conn->query($query);
+  ```
+
+  This information is used to display site-wide contact details like email and phone number.
+
+---
+
+## 3. Admin Login Credentials
+
+To access the **Admin Panel**, use the following credentials:
+
+- **Admin Email**: `addmingame1215225@gamer.com`
+- **Password**: `admin@1215225`
+
+After logging in, you will have access to admin features, such as managing users, games, orders, and more.
+
+---
+
+## 4. Setting up the Project
+
+### Step-by-Step Guide:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/projectname.git
+   ```
+
+2. **Set up the database**:
+
+   - Import the provided SQL file into your MySQL database.
+
+3. **Configure the `config.php`** file with your MySQL credentials.
+4. **Configure the `payconfig.php`** file with your JazzCash merchant details.
+5. **Start the local server** (e.g., using XAMPP or WAMP) and visit the project URL.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+By following the instructions provided in this document, you should be able to successfully configure the payment system, database, and access the admin panel.
+
+---
+
+This README covers all the key points related to the configuration of the JazzCash payment gateway, database connection, and admin login.
