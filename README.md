@@ -264,5 +264,9 @@
 * **Anime & Media Hub:** Specialized pages for anime details (`anime-details.php`).
 * **Gaming Section:** Free game download functionality (`download_free_game.php`).
 * **Blogging System:** Full blog support with `blog.php` and `blog-details.php`.
+* ### **📦 Media & Entertainment**
+* **Anime Hub:** Explore detailed series information using `anime-details.php`.
+* **Integrated Blog:** Full blogging platform via `blog.php` and `blog-details.php`.
+* **Gaming Section:** Support for free game downloads (`download_free_game.php`).
 ## 📂 Project Structure
 (Currently a flat structure optimized for educational purposes and ease of access).
